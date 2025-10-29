@@ -1,0 +1,66 @@
+.why-soft {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  color: #222;
+  font-family: "Arial", sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background-color: #000;
+  margin: 0 auto 20px auto;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.feature {
+  width: 220px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.red {
+  color: #e53935;
+}
+
+.blue {
+  color: #4285f4;
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}

@@ -1,0 +1,96 @@
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.logo span {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.nav-links li:hover > a {
+  color: purple;
+}
+
+.dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 8px 20px;
+  color: black;
+}
+
+.dropdown li a:hover {
+  background-color: #f0f0f0;
+  color: purple;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.social-icons li {
+  margin-left: 10px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+  color: purple;
+}
