@@ -1,4 +1,4 @@
-.modal-overlay {
+.reg-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,80 +11,73 @@
   z-index: 1000;
 }
 
-.modal-container {
+.reg-box {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 30px;
-  width: 400px;
+  width: 450px;
   max-width: 90%;
   position: relative;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
 
-.close-btn {
+/* Close Button */
+.reg-close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
+  top: 12px;
+  left: 200px;
+  background: transparent !important;
   border: none;
-  font-size: 20px;
+  font-size: 26px;
   cursor: pointer;
+  color: #333;
+  font-weight: bold;
 }
 
-.modal-header {
+.reg-title {
   text-align: center;
-  margin-bottom: 15px;
-}
-
-.modal-logo {
-  width: 120px;
-}
-
-.modal-title {
-  text-align: center;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
-.register-form {
+.reg-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.register-form input {
-  padding: 10px;
-  border-radius: 6px;
+.reg-form input {
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.terms {
-  font-size: 12px;
-  color: #333;
+.reg-terms {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
+  font-size: 13px;
+  color: #333;
 }
 
-.terms a {
+.reg-terms a {
   color: #007bff;
-  text-decoration: none;
 }
 
-.register-btn {
+.reg-submit-btn {
   background-color: #00b3b3;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 10px 0;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 18px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
+  margin-top: 10px;
 }
 
-.register-btn:hover {
+.reg-submit-btn:hover {
   background-color: #009999;
 }

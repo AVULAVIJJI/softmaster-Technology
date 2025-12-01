@@ -1,26 +1,36 @@
-/* Header Styles */
+/* === FIXED HEADER === */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: relative;
+  padding: 8px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-.logo h2 {
-  margin: 0;
-  font-weight: bold;
+/* Push content down so header won't hide the top part */
+body {
+  padding-top: 70px;
 }
 
-.logo span {
-  font-weight: normal;
-  font-size: 0.9rem;
-  color: gray;
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
 }
 
+.logo-img {
+  width: 80px;
+  cursor: pointer;
+}
+
+/* Navigation */
 nav {
   display: flex;
   align-items: center;
@@ -29,26 +39,36 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links li {
-  position: relative;
   margin: 0 15px;
+  position: relative;
 }
 
+/* Normal link */
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight:600;
   padding: 5px;
+  transition: 0.3s;
 }
 
-.nav-links li:hover > a {
+/* Hover */
+.nav-links a:hover {
   color: purple;
 }
 
+/* === ACTIVE PAGE HIGHLIGHT === */
+.nav-links a.active {
+  color: purple;
+  font-weight: 700;
+  border-bottom: 2px solid purple;   /* highlight underline */
+  padding-bottom: 3px;
+}
+
+/* Dropdown */
 .dropdown {
   position: absolute;
   top: 35px;
@@ -57,11 +77,9 @@ nav {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   list-style: none;
   padding: 10px 0;
-  min-width: 150px;
-}
-
-.dropdown li {
-  margin: 0;
+  min-width: 160px;
+  border-radius: 5px;
+  z-index: 999;
 }
 
 .dropdown li a {
@@ -71,7 +89,7 @@ nav {
 }
 
 .dropdown li a:hover {
-  background-color: #f0f0f0;
+  background: #f0f0f0;
   color: purple;
 }
 
@@ -94,3 +112,92 @@ nav {
 .social-icons a:hover {
   color: purple;
 }
+/* =========================================================
+   RESPONSIVE NAVBAR
+========================================================= */
+
+/* HIDE HAMBURGER INITIALLY */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  margin-left: 15px;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 900px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  /* Hide normal nav */
+  .nav-links,
+  .social-icons {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* When menu is active (class 'show' added via JS) */
+  nav.mobile-nav-active .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Dropdown in Mobile */
+  .dropdown {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background: #f8f8f8;
+  }
+
+  .dropdown li a {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* --- SMALL DEVICES --- */
+@media (max-width: 500px) {
+  .logo-img {
+    width: 65px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+}
+  

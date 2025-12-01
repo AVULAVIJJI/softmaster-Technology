@@ -1,27 +1,52 @@
 import React from 'react';
-import './Footer.css'; // Import the corresponding CSS
+import './Footer.css';
+import logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
+
+      {/* ===== Top Row (Logo + Social Icons) ===== */}
+      <div className="footer-top">
+        <div className="footer-logo">
+          <Link to="/">
+            <img src={logo} alt="Logo" className="logo-img" />
+          </Link>
+        </div>
+
+        <div className="footer-social">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" />
+          </a>
+
+          <a href="https://whatsapp.com/channel/0029VaynkiWLY6dDqM1uUJ1t" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
+          </a>
+
+          <a href="https://t.me/smtssc" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/color/48/telegram-app.png" alt="Telegram" />
+          </a>
+        </div>
+      </div>
+
+      {/* ===== Footer Content Sections ===== */}
       <div className="footer-container">
 
-        {/* About Pro Stack */}
         <div className="footer-section">
-          <h3>About Pro Stack</h3>
+          <h3>About SoftMaster</h3>
           <p>
-            Best Full Stack And AI Bootcamp Training Institute With Expert-Led Courses In Python,
-            Java, React, Next.Js, Spring Boot, Databases, And AI Technologies.
+            Best Full Stack And AI Bootcamp Training Institute With Expert-Led
+            Courses In Python, Java, React, Next.Js, Spring Boot, Databases, And
+            AI Technologies.
           </p>
           <p>
-            <strong>Address:</strong> RJ Garden, #96, Ground Floor, Chinnappanahalli,
-            Marathahalli, Bengaluru, Karnataka 560037.
+            <strong>Address:</strong> Indira Nagar Colony, Peerzadiguda, Hyderabad, Telangana 500098
           </p>
         </div>
 
-        {/* Pro Stack Links */}
         <div className="footer-section">
-          <h3>Pro Stack</h3>
+          <h3>SoftMaster Technology</h3>
           <ul>
             <li><a href="#">Practice</a></li>
             <li><a href="#">Placements</a></li>
@@ -30,7 +55,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Get In Touch */}
         <div className="footer-section">
           <h3>Get In Touch</h3>
           <ul>
@@ -40,7 +64,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Courses */}
         <div className="footer-section">
           <h3>Courses</h3>
           <ul>
@@ -51,19 +74,26 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Online Training */}
         <div className="footer-section">
           <h3>Online Training</h3>
+
           <div className="icons">
-            <img src="https://img.icons8.com/color/48/000000/goto-meeting.png" alt="GoToMeeting" />
-            <img src="https://img.icons8.com/color/48/000000/zoom.png" alt="Zoom" />
+            GoToMeeting 
+            <img src="https://img.icons8.com/color/48/zoom.png" alt="Zoom" />
           </div>
 
           <h3>Payment Info</h3>
           <p><strong>GPay / PhonePe / Paytm</strong></p>
-          <p>9591 61 9191</p>
+          <p>85009 10044</p>
+          <p>Smtsolutions@smtssc.com</p>
         </div>
       </div>
+
+      {/* ===== Bottom COPYRIGHT Row ===== */}
+      <div className="footer-bottom">
+        © 2025 SoftMaster Technology | All Rights Reserved.
+      </div>
+
     </footer>
   );
 };

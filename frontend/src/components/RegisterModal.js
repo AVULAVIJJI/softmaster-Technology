@@ -1,43 +1,110 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./RegisterModal.css";
 
 const RegisterModal = ({ onClose }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    course: "",
+    message: "",
+    termsAccepted: false,
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  // Submit form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/register", formData);
+
+      alert("Registration Successful!");
+      console.log("Saved Data:", res.data);
+
+      onClose(); // close modal on success
+
+    } catch (error) {
+      console.error("Registration Failed:", error);
+      alert("Registration Failed! Check your backend.");
+    }
+  };
+
   return (
-    <div className="modal-overlay">
-      <div className="modal-container">
-        <button className="close-btn" onClick={onClose}>
-          ✖
-        </button>
+    <div className="reg-overlay">
+      <div className="reg-box">
 
-        {/* Logo Section */}
-        <div className="modal-header">
-          <img
-            src="https://www.excelr.com/images/logo.png"
-            alt="ExcelR Logo"
-            className="modal-logo"
+        {/* Close Button */}
+        <button className="reg-close-btn" onClick={onClose}>✖</button>
+
+        <h2 className="reg-title">Register now</h2>
+
+        <form className="reg-form" onSubmit={handleSubmit}>
+          
+          <input
+            type="text"
+            name="name"
+            placeholder="Name*"
+            required
+            onChange={handleChange}
           />
-        </div>
 
-        <h2 className="modal-title">Register now</h2>
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail*"
+            required
+            onChange={handleChange}
+          />
 
-        {/* Form */}
-        <form className="register-form">
-          <input type="text" placeholder="Name*" required />
-          <input type="email" placeholder="E-mail*" required />
-          <input type="tel" placeholder="Mobile Number*" required />
-          <input type="text" placeholder="Course*" required />
-          <input type="text" placeholder="City*" required />
+          <input
+            type="tel"
+            name="mobile"
+            placeholder="Mobile Number*"
+            required
+            onChange={handleChange}
+          />
 
-          <div className="terms">
-            <input type="checkbox" id="terms" required />
+          <input
+            type="text"
+            name="course"
+            placeholder="Course*"
+            required
+            onChange={handleChange}
+          />
+
+          <input
+            type="text"
+            name="message"
+            placeholder="Message*"
+            required
+            onChange={handleChange}
+          />
+
+          <div className="reg-terms">
+            <input
+              type="checkbox"
+              id="terms"
+              name="termsAccepted"
+              onChange={handleChange}
+              required
+            />
             <label htmlFor="terms">
-              I hereby accepting agree the{" "}
-              <a href="#">terms and conditions</a> and{" "}
-              <a href="#">privacy policy</a> of ExcelR Solutions
+              I hereby accept the <a href="#">terms and conditions</a> and{" "}
+              <a href="#">privacy policy</a>.
             </label>
           </div>
 
-          <button type="submit" className="register-btn">
+          <button type="submit" className="reg-submit-btn">
             Register
           </button>
         </form>

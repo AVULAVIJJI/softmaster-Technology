@@ -7,11 +7,10 @@ import "./WhySoft.css";
 const WhySoft = () => {
   return (
     <section className="why-soft">
-      <h2 className="title">WhySoft?</h2>
+      <h2 className="title">Why SoftMaster Technology ?</h2>
       <div className="divider"></div>
       <p className="subtitle">
-        Being in the industry for over ten years, we always bring you the latest
-        happenings, so your training is best-in-quality and more engaging.
+        Combining real-world insights with hands-on learning, we ensure your skills meet today’s tech standards.
       </p>
 
       <div className="features">

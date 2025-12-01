@@ -8,8 +8,14 @@
 
 .title {
   font-size: 2rem;
-  font-weight: 700;
+  
   margin-bottom: 10px;
+      /* REMOVE underline */
+  border: none;               /* REMOVE any border underline */
+}
+
+.title u {
+  text-decoration: none;      
 }
 
 .divider {

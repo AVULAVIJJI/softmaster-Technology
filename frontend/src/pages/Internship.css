@@ -1,0 +1,347 @@
+/* ========== Register Button ========== */
+.register-btn {
+  display: inline-block;
+  background-color: #2457a6;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+.register-btn:hover {
+  background-color: #1c4790;
+}
+
+
+.internship-banner {
+  width: 100%;
+  height: 320px;                    /* increased height so full head fits */
+  background-size: cover;
+  background-position: center top;  /* 👈 SHOW GIRL HEAD */
+  position: relative;
+  object-position: top;
+}
+
+.internship-banner::before {
+  content: "center";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 0, 120, 0.45);
+}
+.aboutus-banner .overlay {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======= Banner Overlay Text Styling ======= */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center;     /* Centers horizontally */
+
+  text-align: center;
+  z-index: 2;
+}
+
+/* Title Text */
+.banner-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Breadcrumb */
+.banner-breadcrumb {
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Arrow style in breadcrumb */
+.banner-breadcrumb .arrow {
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+  .banner-breadcrumb {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+/* ========== Table Container Expanded ========== */
+.internship-container {
+  padding: 50px 3%;
+  background: #f9f9f9;
+}
+.internship-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c2c7a;
+}
+
+.internship-table {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.internship-table th {
+  background: #3c3b83;
+  color: white;
+  padding: 16px;
+}
+
+.internship-table td {
+  padding: 18px 25px;
+}
+
+.alt-row {
+  background: #f4f4f4;
+}
+
+/* ========== Callback Section ========== */
+/* ========== Callback Section ========== */
+.callback-section {
+  padding: 40px 3%;
+  text-align: center;
+  border-top: 2px solid #eee;
+}
+
+.callback-section h2 {
+  font-size: 2rem;
+  color: #0b0b3b;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* FORM ROW EXACT LIKE YOUR IMAGE */
+.callback-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* INPUTS EXACT STYLE MATCH */
+.callback-form input,
+.callback-form select {
+  width: 220px;                 /* fixed width like your example */
+  height: 50px;                 /* exact height like your image */
+  padding: 0 15px;
+  background: #dcdcdc;          /* same light grey background */
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+}
+
+/* SELECT ARROW ALIGNMENT FIX */
+.callback-form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23000000' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+/* BUTTON EXACT MATCH */
+.callback-form button {
+  height: 50px;                 /* SAME height as inputs */
+  padding: 0 30px;
+  background-color: #070033;    /* dark blue same as image */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.callback-form button:hover {
+  background-color: #0d0055;
+}
+
+
+/* ========== TAB Section Expanded ========== */
+.tab-courses-section {
+  padding: 30px 3%;
+
+}
+.tab-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c2c7a;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* border-bottom: 2px solid #ddd; */
+  padding-bottom: 5px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #444;
+  border-bottom: 3px solid transparent;
+  transition: 0.25s ease;
+  white-space: nowrap;
+  width: auto;
+}
+
+.tab.active {
+
+  border-bottom: 3px solid #3c3b83;
+}
+
+.tab-content {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px 5px 25px;
+}
+
+/* === SMALL TAB CARDS === */
+.tab-card {
+  min-width: 240px;
+  max-width: 240px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.tab-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tab-card-title {
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #2c2c7a;
+}
+
+/* ====================================================
+        ABOUT VERSION IT SECTION 
+==================================================== */
+.about-version-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 5%;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-logo {
+  width: 100%;
+  max-width: 350px;
+  object-fit: contain;
+}
+
+.about-right {
+  flex: 1.2;
+  min-width: 320px;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #2c2c7a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.about-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3c3b83;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-btn:hover {
+  background: #2e2d72;
+}
+
+.focus-title {
+  font-size: 1.6rem;
+  color: #2c2c7a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.focus-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.8;
+}

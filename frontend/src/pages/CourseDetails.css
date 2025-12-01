@@ -1,0 +1,85 @@
+/* MAIN WRAPPER — side by side layout */
+.course-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: #0d0c71;
+  color: white;
+}
+
+/* LEFT SECTION -------------------------------------- */
+.course-left {
+  width: 60%;
+}
+
+.course-desc {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Details Box */
+.details-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: #1b1880;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+}
+
+/* More Information Section */
+.more-info {
+  margin-top: 35px;
+}
+
+.more-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* RIGHT SECTION — FORM -------------------------------- */
+.form-section {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  width: 35%;
+  height: fit-content;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 14px;
+  background: #0d0c71;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .course-wrapper {
+    flex-direction: column;
+  }
+
+  .course-left,
+  .form-section {
+    width: 100%;
+  }
+}

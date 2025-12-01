@@ -1,11 +1,20 @@
-/* Hero Section Base */
+/* ===========================
+   Hero Section Base
+=========================== */
 .hero-section {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') no-repeat center center/cover;
+  height: 90vh; /* Increased Banner Height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0 20px;
   overflow: hidden;
+  transition: background-image 1s ease-in-out;
 }
 
 .hero-section::after {
@@ -16,94 +25,140 @@
   z-index: 0;
 }
 
-/* Content Area */
+/* ===========================
+   Content + Slide Animation
+=========================== */
+/* ===========================
+   Content + Slide Animations
+=========================== */
+/* ===========================
+   Content + Repeating Slide Animations
+=========================== */
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 1100px;
-  margin: auto;
+  width: 100%;
 }
 
+/* Title: slide diagonally from top-left (repeats) */
 .hero-title {
-  font-size: 48px;
+  font-size: 60px;        /* increased size */
   font-weight: bold;
   margin-bottom: 20px;
+  
+  opacity: 0;
+  animation: slideDownLeft 2s ease-out infinite;
 }
 
+/* Subtitle: slide diagonally from top-right (repeats) */
 .hero-subtitle {
-  font-size: 28px;
+  font-size: 32px;        /* increased size */
   font-weight: 500;
   color: #cdd5e0;
   margin-bottom: 10px;
+
+  opacity: 0;
+  animation: slideDownRight 2s ease-out infinite;
+  animation-delay: 0.2s;  /* small delay for nice effect */
 }
 
-/* Search Form */
-.search-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
+/* Title animation (top-left) */
+@keyframes slideDownLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, -40px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translate(-10px, -10px);
+  }
 }
 
-.form-group {
-  background: #0d234a;
-  border-radius: 10px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  min-width: 250px;
+/* Subtitle animation (top-right) */
+@keyframes slideDownRight {
+  0% {
+    opacity: 0;
+    transform: translate(40px, -40px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translate(10px, -10px);
+  }
+}
+.footer-text {
+  font-size: 26px;       /* Increased text size */
+  font-weight: 600;
+  color: white;
+  opacity: 0;
+  animation: slideDown 2s ease-in-out infinite;
 }
 
-.form-label {
-  color: #ffffff;
-  margin-bottom: 5px;
-  font-size: 14px;
-  text-align: left;
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, -40px); /* from top + left */
+  }
+  40% {
+    opacity: 1;
+    transform: translate(0, 0); /* reach final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); /* stays here (no slide back) */
+  }
 }
 
-select {
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  background-color: #fff;
-  color: #333;
-  outline: none;
-}
 
+/* ===========================
+   Buttons
+=========================== */
 .button-group {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  gap: 15px;
   align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.search-btn,
-.enquire-btn {
+.search-btnn,
+.enquire-btnn {
   background-color: #0d6efd;
   color: white;
-  padding: 12px 25px;
+  padding: 10px 10px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 200px;
+  text-align: center;
 }
 
-.enquire-btn {
+.enquire-btnn {
   background-color: #007bff;
 }
 
-.search-btn:hover,
-.enquire-btn:hover {
+.search-btnn:hover,
+.enquire-btnn:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
 
-/* Floating Request Call Back Button */
-.callback-btn {
-  position: fixed; /* keeps it visible while scrolling */
+/* ===========================
+   Request Callback Button
+=========================== */
+.callback-bton {
+  position: fixed;
   top: 50%;
   right: 0;
   background-color: #0d234a;
@@ -120,32 +175,42 @@ select {
   transition: background 0.3s ease;
 }
 
-.callback-btn:hover {
+.callback-bton:hover {
   background-color: #007bff;
 }
 
-/* Floating Call Icon (Bottom Left) */
-.call-icon {
-  position: fixed; /* stays visible on scroll */
+/* ===========================
+   WhatsApp Floating Icon
+=========================== */
+.whatsapp-icon {
+  position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #007bff;
-  color: white;
-  font-size: 24px;
-  padding: 12px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
   border-radius: 50%;
-  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 999;
+  transition: transform 0.3s ease;
 }
 
-.call-icon:hover {
+.whatsapp-icon:hover {
   transform: scale(1.1);
-  background-color: #0056b3;
 }
 
-/* Responsive Design */
+.whatsapp-img {
+  width: 35px;
+  height: 35px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 36px;
@@ -155,16 +220,8 @@ select {
     font-size: 20px;
   }
 
-  .search-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-group {
-    width: 90%;
-  }
-
   .button-group {
-    flex-direction: row;
+    flex-direction: column;
+    gap: 10px;
   }
 }

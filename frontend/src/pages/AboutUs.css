@@ -1,0 +1,222 @@
+/* /* ======= ABOUT US BANNER ======= */
+.aboutus-banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+}
+
+.aboutus-banner .overlay {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 48px;
+  color: #fff;
+  font-weight: 700;
+  z-index: 2;
+  margin: 0;
+}
+
+.banner-breadcrumb {
+  color: #e3e3e3;
+  font-size: 18px;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.banner-breadcrumb .arrow {
+  margin: 0 8px;
+}
+
+
+.arrow {
+  margin: 0 8px;
+  font-weight: 600;
+}
+
+/* =======================================
+   ========== ABOUT CONTENT SECTION =======
+   ======================================= */
+.aboutus-section {
+  background: #f9fbff;
+  padding: 60px 20px;
+}
+
+.aboutus-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LEFT SIDE */
+.aboutus-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.aboutus-img {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* BATCH BOX */
+.batches-box {
+  background-color: #001e80;
+  color: white;
+  padding: 25px 35px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.batches-box h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.batches-box p {
+  margin: 5px 0 0;
+  letter-spacing: 2px;
+}
+
+/* RIGHT SIDE */
+.aboutus-right {
+  flex: 1;
+  min-width: 330px;
+  color: #333;
+}
+
+.aboutus-heading {
+  font-size: 1.2rem;
+  color: #003366;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.aboutus-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #001e80;
+  margin-bottom: 20px;
+}
+
+.aboutus-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* =======================================
+   ======== WHAT WE PROVIDE SECTION ======
+   ======================================= */
+.provide-section {
+  background: #0c0078;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.provide-heading {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.provide-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* PROVIDE BOX */
+.provide-box {
+  background: transparent;
+  border: 2px solid #ff8c00;
+  padding: 35px 25px;
+  border-radius: 14px;
+  color: white;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+
+.provide-box:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-7px);
+}
+
+/* ICONS */
+.provide-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+/* HEADINGS & TEXT */
+.provide-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.provide-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =======================================
+   ========== RESPONSIVE DESIGN ===========
+   ======================================= */
+
+@media (max-width: 992px) {
+  .aboutus-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutus-img {
+    width: 80%;
+  }
+
+  .batches-box {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .provide-heading {
+    font-size: 1.9rem;
+  }
+
+  .provide-box {
+    padding: 25px 18px;
+  }
+}

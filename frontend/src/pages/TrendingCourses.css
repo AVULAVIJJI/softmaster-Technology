@@ -1,0 +1,111 @@
+/* ==========================
+   ⭐ TOP BANNER STYLING
+=========================== */
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.banner-content p {
+  font-size: 18px;
+}
+
+.banner-content a {
+  color: #ffdf5e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* ==========================
+   ⭐ TRENDING COURSES SECTION
+=========================== */
+
+.trend-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.trend-title {
+  font-size: 32px;
+  color: #0d0c71;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.trend-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trend-card {
+  background: white;
+  width: 300px;
+  border-radius: 12px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.trend-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.trend-name {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d0c71;
+}
+
+.trend-desc {
+  padding: 0 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.learn-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color:#0d0c71;
+  color: white;
+  border: none;
+  width: 85%;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.learn-btn:hover {
+  background-color: blue;
+}

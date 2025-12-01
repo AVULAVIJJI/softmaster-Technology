@@ -1,10 +1,49 @@
+/* ===============================
+   MAIN FOOTER WRAPPER (DARK THEME)
+================================= */
 .footer {
-  background-color: #0f1117;
-  color: #fff;
+  background: #1b1f24; /* dark background from your screenshot */
+  color: #d2d2d2; /* light gray text */
   padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #2c2f34;
 }
 
+/* ===============================
+   TOP ROW: LOGO + SOCIALS
+================================= */
+.footer-top {
+  background-color:lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2c2f34;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  width: 100;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-social a {
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img {
+  height: 32px;
+  width: 32px;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+   FOOTER COLUMNS
+================================= */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -16,13 +55,20 @@
   margin: 20px;
 }
 
+/* ===============================
+   TITLES (White with soft underline)
+================================= */
 .footer-section h3 {
   margin-bottom: 15px;
   font-size: 18px;
-  border-bottom: 2px solid #444;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff20; /* subtle underline */
 }
 
+/* ===============================
+   LISTS + LINKS
+================================= */
 .footer-section ul {
   list-style: none;
   padding: 0;
@@ -32,18 +78,56 @@
   margin-bottom: 10px;
 }
 
+.footer-section ul li a,
 .footer-section a {
-  color: #ccc;
+  color: #d2d2d2 !important;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
+.footer-section ul li a:hover,
 .footer-section a:hover {
-  color: #fff;
+  color: #ffffff !important; /* white hover */
 }
 
+/* ===============================
+   SOCIAL ICONS
+================================= */
 .icons img {
   height: 30px;
   margin-right: 10px;
   vertical-align: middle;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #2c2f34;
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+  }
+}
+
+/* Remove horizontal scrollbar */
+html, body {
+  overflow-x: hidden !important;
 }
