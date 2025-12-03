@@ -7,7 +7,7 @@
   // ===============================
   // ⭐ Registration API
   // ===============================
-  router.post('/register', async (req, res) => {
+  router.post('/', async (req, res) => {
     try {
       const { name, email, mobile, course, message, termsAccepted } = req.body;
 
@@ -40,33 +40,33 @@
   // ===============================
   // ⭐ Contact Form API
   // ===============================
-  // router.post('/contact', async (req, res) => {
-  //   try {
-  //     const { fullName, city, email, phone, message } = req.body;
+  router.post('/contact', async (req, res) => {
+    try {
+      const { fullName, city, email, phone, message } = req.body;
 
-  //     if (!fullName || !city || !email || !phone) {
-  //       return res.status(400).json({ msg: "Please fill all required fields" });
-  //     }
+      if (!fullName || !city || !email || !phone) {
+        return res.status(400).json({ msg: "Please fill all required fields" });
+      }
 
-  //     const contactData = new Contact({
-  //       fullName,
-  //       city,
-  //       email,
-  //       phone,
-  //       message
-  //     });
+      const contactData = new Contact({
+        fullName,
+        city,
+        email,
+        phone,
+        message
+      });
 
-  //     await contactData.save();
+      await contactData.save();
 
-  //     res.status(201).json({
-  //       msg: "Message sent successfully!",
-  //       data: contactData
-  //     });
+      res.status(201).json({
+        msg: "Message sent successfully!",
+        data: contactData
+      });
 
-  //   } catch (error) {
-  //     console.error("Contact Error:", error);
-  //     res.status(500).json({ msg: "Server error" });
-  //   }
-  // });
+    } catch (error) {
+      console.error("Contact Error:", error);
+      res.status(500).json({ msg: "Server error" });
+    }
+  });
 
-  // module.exports = router;
+  module.exports = router;
