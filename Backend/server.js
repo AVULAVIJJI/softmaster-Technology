@@ -16,7 +16,10 @@ connectDB();
 // Middleware
 app.use(
   cors({
-    origin: "https://your-frontend-name.vercel.app",
+    origin: [
+      "http://localhost:3000",
+      "https://softmaster-technology-git-main-avulavijjis-projects.vercel.app"
+    ],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
