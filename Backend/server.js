@@ -18,7 +18,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://softmaster-technology-git-main-avulavijjis-projects.vercel.app"
+      "https://softmaster-technology.vercel.app"
     ],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
