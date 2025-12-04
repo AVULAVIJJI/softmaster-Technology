@@ -41,7 +41,7 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      await axios.post("http://localhost:5000/api/contact", {
+      await axios.post("https://softmaster-technology-1.onrender.com/api/contact", {
         fullName: form.fullName,
         email: form.email,
         mobile: form.mobile,

@@ -32,7 +32,7 @@ const RegisterModal = ({ onClose }) => {
       console.log("Saved Data:", res.data);
 
       onClose(); // close modal on success
-
+      
     } catch (error) {
       console.error("Registration Failed:", error);
       alert("Registration Failed! Check your backend.");
