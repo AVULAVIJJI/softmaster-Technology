@@ -26,7 +26,7 @@ const RegisterModal = ({ onClose }) => {
     e.preventDefault();
 
     try {
-     const res = await axios.post("https://softmaster-backend.onrender.com/api/register", formData);
+     const res = await axios.post("https://softmaster-technology-1.onrender.com/api/register", formData);
 
       alert("Registration Successful!");
       console.log("Saved Data:", res.data);
