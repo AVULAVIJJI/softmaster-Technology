@@ -10,15 +10,26 @@ const callbackRoute = require("./routes/callback");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Connect DB
-connectDB();
+/* =========================
+   CONNECT DATABASE (ONCE)
+========================= */
+(async () => {
+  console.log("Connecting DB at:", new Date());
+  await connectDB();
+  console.log("DB connected at:", new Date());
 
-// CORS FIX
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+})();
+
+/* =========================
+   CORS
+========================= */
 const allowedOrigins = [
   "http://localhost:3000",
   "https://softmastertech.com",
   "https://www.softmastertech.com"
-  
 ];
 
 app.use((req, res, next) => {
@@ -27,7 +38,10 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", origin);
   }
   res.header("Access-Control-Allow-Credentials", "true");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
 
   if (req.method === "OPTIONS") {
@@ -38,17 +52,14 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-// Routes
+/* =========================
+   ROUTES
+========================= */
 app.use("/api/register", registerRoute);
 app.use("/api/contact", contactRoute);
 app.use("/api/callback", callbackRoute);
 
-// Test Route
+// Health check
 app.get("/", (req, res) => {
   res.send({ status: "Backend working" });
-});
-
-// Server Start
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
 });
