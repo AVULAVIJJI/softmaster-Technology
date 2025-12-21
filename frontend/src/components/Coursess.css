@@ -1,23 +1,31 @@
+/* ===========================
+   Courses Section
+=========================== */
 .coursess-container {
-  padding: 40px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
+/* TITLE */
 .title {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 25px;
   text-decoration: underline;
   font-weight: bold;
 }
 
+/* ===========================
+   Scroll Buttons
+=========================== */
 .scrolll-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
+/* ARROW */
 .arrow-button {
   font-size: 15px;
   background-color: #007bff;
@@ -27,31 +35,45 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .arrow-button:hover {
   background-color: #0056b3;
 }
 
+/* ===========================
+   Scroll Container
+=========================== */
 .card-grid-scrolll {
   display: flex;
+  gap: 15px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 15px; /* Slightly less gap for smaller cards */
-  padding: 15px 0; /* Less padding */
-  max-width: 90%;
+  padding: 15px 5px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-/* .card-grid-scroll::-webkit-scrollbar {
-  display: none; 
-} */
+.card-grid-scrolll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.card-grid-scrolll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* ===========================
+   Course Card
+=========================== */
 .course-cardd {
   flex: 0 0 auto;
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px; /* Reduced width */
+  width: 260px;
+  min-width: 240px;
   text-align: left;
   transition: transform 0.3s ease;
 }
@@ -60,41 +82,88 @@
   transform: translateY(-5px);
 }
 
+/* IMAGE */
 .course-image {
   width: 100%;
-  height: 140px; /* Reduced height */
+  height: 150px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
+/* CONTENT */
 .course-content {
-  padding: 15px; /* Slightly less padding */
+  padding: 14px;
 }
 
 .course-content h3 {
-  font-size: 1.1rem; /* Slightly smaller text */
+  font-size: 1.1rem;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
 .course-content p {
   margin: 4px 0;
-  font-size: 13px; /* Slightly smaller */
+  font-size: 13px;
 }
 
+/* BUTTON */
 .knoww-more-btn {
   margin-top: 12px;
   background-color: #007bff;
   color: white;
-  padding: 8px 15px; /* Slightly smaller button */
+  padding: 8px 16px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 13px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.know-more-btn:hover {
+.knoww-more-btn:hover {
   background-color: #0056b3;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+@media (max-width: 1024px) {
+  .course-cardd {
+    width: 240px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+@media (max-width: 768px) {
+  .coursess-container {
+    padding: 30px 12px;
+  }
+
+  .scrolll-buttons {
+    gap: 8px;
+  }
+
+  .arrow-button {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .course-cardd {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .course-image {
+    height: 130px;
+  }
+
+  .course-content h3 {
+    font-size: 1rem;
+  }
+
+  .course-content p {
+    font-size: 12px;
+  }
 }

@@ -3,7 +3,7 @@
 =========================== */
 .hero-section {
   position: relative;
-  height: 90vh; /* Increased Banner Height */
+  height: 90vh; /* Banner Height */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,9 +14,9 @@
   text-align: center;
   padding: 0 20px;
   overflow: hidden;
-  transition: background-image 1s ease-in-out;
 }
 
+/* Dark Overlay */
 .hero-section::after {
   content: "";
   position: absolute;
@@ -26,13 +26,7 @@
 }
 
 /* ===========================
-   Content + Slide Animation
-=========================== */
-/* ===========================
-   Content + Slide Animations
-=========================== */
-/* ===========================
-   Content + Repeating Slide Animations
+   Content
 =========================== */
 .hero-content {
   position: relative;
@@ -41,82 +35,30 @@
   width: 100%;
 }
 
-/* Title: slide diagonally from top-left (repeats) */
+/* ===========================
+   Text (NO ANIMATION)
+=========================== */
 .hero-title {
-  font-size: 60px;        /* increased size */
+  font-size: 60px;
   font-weight: bold;
   margin-bottom: 20px;
-  
-  opacity: 0;
-  animation: slideDownLeft 2s ease-out infinite;
+  opacity: 1;
 }
 
-/* Subtitle: slide diagonally from top-right (repeats) */
 .hero-subtitle {
-  font-size: 32px;        /* increased size */
+  font-size: 32px;
   font-weight: 500;
   color: #cdd5e0;
   margin-bottom: 10px;
-
-  opacity: 0;
-  animation: slideDownRight 2s ease-out infinite;
-  animation-delay: 0.2s;  /* small delay for nice effect */
+  opacity: 1;
 }
 
-/* Title animation (top-left) */
-@keyframes slideDownLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-40px, -40px);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  100% {
-    opacity: 0.4;
-    transform: translate(-10px, -10px);
-  }
-}
-
-/* Subtitle animation (top-right) */
-@keyframes slideDownRight {
-  0% {
-    opacity: 0;
-    transform: translate(40px, -40px);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  100% {
-    opacity: 0.4;
-    transform: translate(10px, -10px);
-  }
-}
 .footer-text {
-  font-size: 26px;       /* Increased text size */
+  font-size: 26px;
   font-weight: 600;
   color: white;
-  opacity: 0;
-  animation: slideDown 2s ease-in-out infinite;
+  opacity: 1;
 }
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translate(-20px, -40px); /* from top + left */
-  }
-  40% {
-    opacity: 1;
-    transform: translate(0, 0); /* reach final position */
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0); /* stays here (no slide back) */
-  }
-}
-
 
 /* ===========================
    Buttons

@@ -50,9 +50,9 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="hero-content">
-        <h2 className="hero-subtitle animate-text">Educate. Elevate.</h2>
+        <h2 className="hero-subtitle animate-text">Educate. Elevate.Excel with</h2>
         <h1 className="hero-title animate-text">
-          Excel with Softmaster Technology
+         Softmaster Technology
         </h1>
 
         {/* Buttons */}

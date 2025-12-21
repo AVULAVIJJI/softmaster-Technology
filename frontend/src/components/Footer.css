@@ -13,7 +13,7 @@
    TOP ROW: LOGO + SOCIALS
 ================================= */
 .footer-top {
-  background-color:lightgrey;
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;

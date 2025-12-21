@@ -10,9 +10,9 @@ const Footer = () => {
       {/* ===== Top Row (Logo + Social Icons) ===== */}
       <div className="footer-top">
         <div className="footer-logo">
-          <Link to="/">
+          {/* <Link to="/">
             <img src={logo} alt="Logo" className="logo-img" />
-          </Link>
+          </Link> */}
         </div>
 
         <div className="footer-social">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
@@ -24,6 +24,11 @@ import TestingCourses from "./pages/TestingCourses.js";
 import CourseDetails from "./pages/CourseDetails.js";
 
 function App() {
+  // Set browser tab title
+  useEffect(() => {
+    document.title = "SoftMasterTech";
+  }, []);
+
   return (
     <Router>
       <div className="App">
@@ -38,7 +43,7 @@ function App() {
                 <HeroSection />
                 <Courses />
                 <WhySoft />
-                <Testimonials /> 
+                <Testimonials />
               </>
             }
           />
